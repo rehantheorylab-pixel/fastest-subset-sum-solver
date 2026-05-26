@@ -1,0 +1,3 @@
+﻿User-agent: *
+Allow: /
+Sitemap: https://subsetsolver.netlify.app/sitemap.xml
