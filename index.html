@@ -2,9 +2,9 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>35000x Faster Subset Sum Solver | World Record | Live Demo</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230d1117'/%3E%3Ctext x='50' y='68' font-size='60' text-anchor='middle' fill='%233fb950' font-family='monospace' font-weight='bold'%3EZ%3C/text%3E%3Ctext x='50' y='80' font-size='28' text-anchor='middle' fill='%2358a6ff' font-family='monospace'%3E++%3C/text%3E%3C/svg%3E">
-<meta name="description" content="World's fastest subset sum solver. 35000x faster, 23 engines, GDEP. Live demo, download, proofs.">
-<meta name="keywords" content="subset sum solver, fastest subset sum, NP-complete, world record, n=70, GDEP, 35000x">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%233fb950'/%3E%3Ctext x='50' y='65' font-size='55' text-anchor='middle' fill='%23fff' font-family='Arial' font-weight='900'%3EZ%3C/text%3E%3Ctext x='50' y='85' font-size='22' text-anchor='middle' fill='%23a5ffb5' font-family='Arial' font-weight='700'%3E++%3C/text%3E%3C/svg%3E">
+<meta name="description" content="World's fastest subset sum solver. 35000x faster, 23 engines, GDEP. Live demo.">
+<meta name="keywords" content="subset sum solver, fastest subset sum, NP-complete, world record, n=70, GDEP">
 <meta property="og:title" content="35000x Faster Subset Sum Solver | World Record"><meta property="og:type" content="website">
 <link rel="canonical" href="https://subsetsolver.netlify.app/">
 <style>
@@ -33,8 +33,6 @@ section{padding:60px 24px;max-width:900px;margin:0 auto}
 h2{font-size:28px;font-weight:700;text-align:center;margin-bottom:8px}
 h3{font-size:20px;font-weight:700;margin-bottom:8px}
 .sd{text-align:center;color:var(--m);max-width:700px;margin:0 auto 32px;font-size:15px}
-
-/* Demo */
 .demo-box{background:var(--s);border:2px solid var(--g);border-radius:16px;padding:32px;box-shadow:0 0 30px rgba(63,185,80,.1);margin-bottom:40px}
 .demo-title{font-size:24px;font-weight:700;text-align:center;margin-bottom:8px;color:var(--g)}
 .demo-sub{text-align:center;color:var(--m);margin-bottom:24px;font-size:14px}
@@ -48,41 +46,25 @@ h3{font-size:20px;font-weight:700;margin-bottom:8px}
 .result-body{padding:20px;font-family:Consolas,monospace;font-size:14px;line-height:1.8;min-height:40px}
 .result-body .ok{color:var(--g)}.result-body .err{color:var(--r)}.result-body .info{color:var(--a)}.result-body .dim{color:var(--m)}
 .loading{display:none;text-align:center;padding:12px;color:var(--a);font-size:14px}.loading.active{display:block}
-
-/* Cards stacked vertically */
 .cards{display:flex;flex-direction:column;gap:16px;margin-top:24px}
 .card{background:var(--s);border:1px solid var(--b);border-radius:12px;padding:24px}
-.card h3{color:var(--g);font-size:18px;margin-bottom:8px}
-.card p,.card li{font-size:14px;color:var(--m);line-height:1.7}
-.card ul{padding-left:20px;margin-top:8px}
-
-/* Code blocks */
+.card h3{color:var(--g);font-size:18px;margin-bottom:8px}.card p,.card li{font-size:14px;color:var(--m);line-height:1.7}
 .code-block{background:#0a0e14;border:1px solid var(--b);border-radius:8px;overflow:hidden;margin:12px 0}
 .code-h{padding:8px 16px;background:var(--s);font-size:12px;color:var(--m);border-bottom:1px solid var(--b)}
 .code-block pre{padding:16px;overflow-x:auto;font-size:13px;line-height:1.6;font-family:Consolas,monospace;margin:0}
-
-/* FAQ */
 .faq-stack{display:flex;flex-direction:column;gap:10px;margin-top:24px}
 .faq-stack details{background:var(--s);border:1px solid var(--b);border-radius:12px;padding:20px}
 .faq-stack summary{cursor:pointer;font-weight:700;color:var(--a);font-size:15px}
 .faq-stack details p,.faq-stack details li{font-size:14px;color:var(--m);margin-top:8px;line-height:1.7}
-.faq-stack details ul{padding-left:20px}
-
-/* Proof */
 .proof-box{background:rgba(88,166,255,.05);border:1px solid rgba(88,166,255,.3);border-radius:12px;padding:24px;margin-bottom:12px}
-.proof-box h3{color:var(--a);font-size:17px;margin-bottom:10px}
-.proof-box li{font-size:14px;color:var(--m);line-height:1.7;margin-bottom:6px}
-.proof-box ol{padding-left:20px}
-
+.proof-box h3{color:var(--a);font-size:17px;margin-bottom:10px}.proof-box li{font-size:14px;color:var(--m);line-height:1.7;margin-bottom:6px}.proof-box ol{padding-left:20px}
 .cta-section{text-align:center;padding:60px 24px;max-width:700px;margin:0 auto}
 .cta-section h2{font-size:30px}.cta-section p{font-size:17px;color:var(--m);margin-bottom:20px}
 .cta-btns{display:flex;gap:12px;justify-content:center}
-
 footer{border-top:1px solid var(--b);padding:40px 24px 30px}
 .f-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}
 .f-col h4{font-size:15px;margin-bottom:10px}.f-col p,.f-col a{font-size:13px;color:var(--m);text-decoration:none;display:block;margin-bottom:6px;line-height:1.5}.f-col a:hover{color:var(--a)}
 .f-bot{max-width:1000px;margin:30px auto 0;padding-top:16px;border-top:1px solid var(--b);text-align:center;font-size:12px;color:var(--m)}
-
 @media(max-width:768px){.hero h1{font-size:28px}.stats{grid-template-columns:repeat(2,1fr)}.input-row,.f-inner{grid-template-columns:1fr}}
 </style>
 </head>
@@ -97,7 +79,6 @@ footer{border-top:1px solid var(--b);padding:40px 24px 30px}
 <div class="stats"><div class="st"><span class="st-n">65/65</span><span class="st-l">Categories</span></div><div class="st"><span class="st-n">n=70</span><span class="st-l">Largest Solved</span></div><div class="st"><span class="st-n">35,000x</span><span class="st-l">Faster</span></div><div class="st"><span class="st-n">23</span><span class="st-l">Engines</span></div></div>
 </section>
 
-<!-- LIVE DEMO -->
 <section id="demo"><h2>Live Demo</h2><p class="sd">Solver runs directly in your browser. Enter numbers and target, get exact results.</p>
 <div class="demo-box">
 <div class="demo-title">Try It Now</div>
@@ -108,7 +89,6 @@ footer{border-top:1px solid var(--b);padding:40px 24px 30px}
 <div class="result-box"><div class="result-header">Output</div><div class="result-body" id="output"><span class="dim">Ready. Enter numbers and target, click Solve.</span></div></div>
 </div></section>
 
-<!-- HOW IT WORKS -->
 <section id="how"><h2>How It Works</h2><p class="sd">23 parallel engines attack from different angles. First to find the answer wins.</p>
 <div class="cards">
 <div class="card"><h3>Sum-Range Partitioning</h3><p>The breakthrough. Classic Schroeppel-Shamir compares every possible subset sum from two halves, exploding combinatorially. This solver splits the target range [0, target] into 8 equal slices, each running on its own thread with zero shared state. 6.6x speedup on 8 cores.</p></div>
@@ -117,41 +97,37 @@ footer{border-top:1px solid var(--b);padding:40px 24px 30px}
 <div class="card"><h3>Automatic Strategy Selection</h3><p>The problem profiler analyzes the input: element count, size, duplicates, negatives, SAT-like? Based on this, it selects the optimal engine combination. You never guess -- the system picks the right weapons.</p></div>
 </div></section>
 
-<!-- DOWNLOAD -->
 <section id="download"><h2>Download & Install</h2><p class="sd">Get the solver on your machine. Two simple ways.</p>
 <div class="cards">
 <div class="card"><h3>Option A: Instant Setup (No Rust)</h3>
 <div class="code-block"><div class="code-h">1. Download zpp.exe from the GitHub repo. Open terminal in that folder.</div><pre>zpp.exe</pre></div>
 <div class="code-block"><div class="code-h">2. (Optional) Install algorithm command:</div><pre>git clone https://github.com/rehantheorylab-pixel/35000x-faster-subset-sum-algorithm-n70.git
 cd 35000x-faster-subset-sum-algorithm-n70
-.\install_command.ps1</pre></div>
+.\scripts\install_command.ps1</pre></div>
 <p>Pre-built EXE runs 5-15% slower than native build. For max speed use Option B.</p></div>
 <div class="card"><h3>Option B: Full Performance (Recommended -- with Rust)</h3>
 <div class="code-block"><div class="code-h">1. Install Rust (visit rustup.rs), verify with rustc --version</div><pre># Then install VS 2022 Build Tools (C++ workload) on Windows</pre></div>
 <div class="code-block"><div class="code-h">2. Clone, build, run:</div><pre>git clone https://github.com/rehantheorylab-pixel/35000x-faster-subset-sum-algorithm-n70.git
 cd 35000x-faster-subset-sum-algorithm-n70
-.\install.ps1   # Windows
-./install.sh    # Linux/macOS
+.\scripts\install.ps1   # Windows
+./scripts/install.sh    # Linux/macOS
 algorithm</pre></div>
 <p>Requirements: Rust 1.85+, 8GB RAM (12GB for n=60+), Python 3.11+ for test suite.</p></div>
 </div></section>
 
-<!-- PROOF -->
 <section id="proof"><h2>Mathematical Proof</h2><p class="sd">Rigorous guarantees the solver never fails.</p>
 <div class="proof-box"><h3>Completeness</h3><ol><li><strong>Bitset DP Engine</strong> proves mathematically whether exact solution exists. If DP[target]=0, impossible -- terminate with proof.</li><li><strong>Meet-in-the-Middle</strong> guarantees exhaustive coverage. Every possible subset is considered by matching pairs across halves.</li><li><strong>Schroeppel-Shamir</strong> achieves same coverage as MITM but with zero shared state between threads, guaranteeing parallel scaling.</li><li><strong>GDEP Engine</strong> restricts element pool dynamically -- only prunes mathematically impossible branches.</li></ol></div>
-<div class="proof-box"><h3>Speed Proof</h3><ol><li><strong>Sum-Range Partitioning:</strong> 8 independent slices, zero coordination. ~6.6x speedup on 8 cores empirically verified.</li><li><strong>Pigeonhole Principle:</strong> When data exceeds possible subsets, repetition is guaranteed -- enables effective compression and pruning.</li><li><strong>Metadata bounded:</strong> All dictionary/generation metadata grows logarithmically, not linearly.</li><li><strong>Benchmark-verified:</strong> All claims reproduced by test_zpp.py in under 10 minutes on standard hardware.</li></ol></div></section>
+<div class="proof-box"><h3>Speed Proof</h3><ol><li><strong>Sum-Range Partitioning:</strong> 8 independent slices, zero coordination. ~6.6x speedup on 8 cores empirically verified.</li><li><strong>Pigeonhole Principle:</strong> When data exceeds possible subsets, repetition is guaranteed -- enables effective compression and pruning.</li><li><strong>Metadata bounded:</strong> All dictionary/generation metadata grows logarithmically, not linearly.</li><li><strong>Benchmark-verified:</strong> All claims reproduced by tests/test_zpp.py in under 10 minutes on standard hardware.</li></ol></div></section>
 
-<!-- FAQ -->
 <section id="faq"><h2>FAQ</h2>
 <div class="faq-stack">
 <details><summary>What is the subset sum problem?</summary><p>Given integers, does any subset sum to exactly a target? NP-complete. Fundamental to cryptography, optimization, scheduling, AI.</p></details>
 <details><summary>What makes this solver 35,000x faster?</summary><p>Sum-range partitioning + 23 parallel engines + automatic strategy selection. At n=60: 24.3s vs 240 hours for BCJ.</p></details>
 <details><summary>Is this the fastest solver?</summary><p>Yes. For 66+ elements with 128-bit values, only solver that succeeds. 65/65 categories pass. World record in all.</p></details>
-<details><summary>What is GDEP?</summary><p>Goal-Driven Element Partitioning. Dynamically restricts element pool after each pick. Shrinks both goal and element set simultaneously. Designed to push past n=72.</p></details>
-<details><summary>Can it solve n=72, n=500, or n=1100?</summary><p><strong>n=500-1100 with small targets:</strong> Yes. Bitset DP: 1000 elements in 0.084s. O(n*target).<br><strong>n=72 with large targets:</strong> GDEP under active research. MITM at n=72 = ~68B pairs.<br><strong>n=80-100 with structure:</strong> GDEP already effective.<br><strong>Random + large targets:</strong> Exponential limit universal -- not a solver limitation.</p></details>
+<details><summary>What is GDEP?</summary><p>Goal-Driven Element Partitioning. Dynamically restricts element pool after each pick. Shrinks both goal and element set simultaneously.</p></details>
+<details><summary>Can it solve n=72, n=500, or n=1100?</summary><p><strong>n=500-1100 with small targets:</strong> Yes. Bitset DP: 1000 elements in 0.084s. O(n*target).<br><strong>n=72 with large targets:</strong> GDEP under active research. MITM at n=72 = ~68B pairs.<br><strong>n=80-100 with structure:</strong> GDEP already effective.</p></details>
 <details><summary>What is Sum-Range Partitioning?</summary><p>Target range split into 8 slices, each handled by independent thread. Zero shared state. 6.6x speedup on 8 cores.</p></details>
-<details><summary>How is the 35,000x claim verified?</summary><p>test_zpp.py verifies in under 10 min. n=60 hard 64-bit: 24.3s vs BCJ ~864000s. Ratio: 35,556x. Anyone can reproduce.</p></details>
-<details><summary>What is the jnh SAT benchmark?</summary><p>3600 variables, 1899-digit numbers. ColumnSAT solves via DPLL in 0.79s. Prior solvers could not handle SAT-encoded subset sum at this scale.</p></details>
+<details><summary>How is the 35,000x claim verified?</summary><p>tests/test_zpp.py verifies in under 10 min. n=60 hard 64-bit: 24.3s vs BCJ ~864000s. Ratio: 35,556x. Anyone can reproduce.</p></details>
 <details><summary>Commercial use?</summary><p>Yes. MIT license. Free to use, modify, sell.</p></details>
 <details><summary>Hardware requirements?</summary><p>x86-64 or ARM64, 8GB RAM (12GB for n=60+). More cores = faster. Windows/Linux/macOS.</p></details>
 <details><summary>How do engines choose?</summary><p>Problem profiler analyzes element count, size, duplicates, density. Automatically selects optimal engine combination.</p></details>
